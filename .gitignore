@@ -3,3 +3,6 @@ dist/
 htmlcov/
 .coverage
 .pylintrc
+.idea/
+coverage.xml
+junit-py3-coverage-django5-sqlite.xml
