@@ -1,0 +1,10 @@
+{% extends "django_kerberos_client/base.html" %}
+
+{% block content %}
+An error occurred during initialization of the GSSAPI context, verify that a properly initialized keytab is accessible
+  {% if details %}
+    <pre>
+      {{ details }}
+    </pre>
+  {% endif %}
+{% endblock %}

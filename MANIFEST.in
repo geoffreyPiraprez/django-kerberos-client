@@ -1,0 +1,7 @@
+include NEWS
+include VERSION
+include tox.ini
+recursive-include tests *.py *.html
+recursive-include sample *.py *.html README *.py.example
+recursive-include src/django_kerberos_client/templates *.html
+recursive-include src/django_kerberos_client/static *.js

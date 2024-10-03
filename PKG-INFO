@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: django-kerberos-client
+Version: 1.0.0
+Summary: Kerberos authentication module for Django
+Home-page: https://www.acsone.eu/
+Author: Acsone
+Author-email: info@acsone.eu
+Maintainer: Geoffrey Piraprez
+Maintainer-email: geoffrey.piraprez@acsone.eu
+License: AGPLv3
+Platform: UNKNOWN

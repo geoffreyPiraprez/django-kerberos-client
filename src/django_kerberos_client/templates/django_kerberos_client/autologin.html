@@ -1,0 +1,19 @@
+{% load staticfiles %}
+{% if not user.is_authenticated %}
+<div id="kerberos-autologin">
+  Autologin...
+  <script src="{% static "js/autologin.js" %}" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+    autologin('{% url 'kerberos-login' %}', function (ok) {
+      var el = document.getElementById('kerberos-autologin')
+      if (ok) {
+        location.reload();
+        el.innerHtml = 'Logged in, reloading...';
+      } else {
+        el.parentNode.removeChild(el);
+      }
+    });
+  </script>
+</div>
+{% endif %}
