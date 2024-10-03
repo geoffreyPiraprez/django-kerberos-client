@@ -3,7 +3,7 @@ Kerberos authentication module for Django
 
 Provide Kerberos authentication to Django applications.
 
-Python 2 and 3, Django >1.8 are supported.
+Python 3, Django >= 5.0 are supported.
 
 Basic usage
 ===========
