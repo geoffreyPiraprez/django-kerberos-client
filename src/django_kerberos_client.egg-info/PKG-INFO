@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: django-kerberos-client
-Version: 1.0.0
+Version: 1.1.0
 Summary: Kerberos authentication module for Django
 Home-page: https://www.acsone.eu/
 Author: Acsone
@@ -18,7 +18,7 @@ Kerberos authentication module for Django
 
 Provide Kerberos authentication to Django applications.
 
-Python 2 and 3, Django >1.8 are supported.
+Python 3, Django >= 5.0 are supported.
 
 Basic usage
 ===========
