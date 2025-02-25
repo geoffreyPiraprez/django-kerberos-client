@@ -53,6 +53,8 @@ class NegotiateView(View):
         if not user:
             self.logger.warning('Principal %s has no local user', self.principal)
             messages.warning(request, _('Principal %s authentication failed') % self.principal)
+            unauthorized_template = 'django_kerberos_client/unauthorized.html'
+            return TemplateResponse(request, unauthorized_template, status=401)
         return http.HttpResponseRedirect(next_url)
 
     def login_user(self, request, user):

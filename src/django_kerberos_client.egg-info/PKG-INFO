@@ -8,6 +8,7 @@ Author-email: info@acsone.eu
 Maintainer: Geoffrey Piraprez
 Maintainer-email: geoffrey.praprez@acsone.eu
 License: AGPLv3
+License-File: LICENSE
 Requires-Dist: six
 Requires-Dist: django>=5.0.0
 Requires-Dist: pykerberos
@@ -24,12 +25,12 @@ Basic usage
 
 Add this to your project `urls.py`::
 
-    url('^accounts/kerberos/', include('django_kerberos.urls')),
+    url('^accounts/kerberos/', include('django_kerberos_client.urls')),
 
 And use the default authentication backend, by adding that to your `settings.py` file::
 
     AUTHENTICATION_BACKENDS = (
-        'django_kerberos.backends.KerberosBackend',
+        'django_kerberos_client.backends.KerberosBackend',
     )
 
 Settings
@@ -86,7 +87,7 @@ authenticate method must be::
 Sample application
 ==================
 
-First you need to install django-kerberos into your environment like that::
+First you need to install django-kerberos-client into your environment like that::
 
     python setup.py install
 
@@ -128,7 +129,7 @@ the staff and superuser flags. You can change that by editing the key
 Pseudo hasher
 =============
 
-A pseudo hasher whose import path is `django_kerberos.hashers.KerberosHasher`
+A pseudo hasher whose import path is `django_kerberos_client.hashers.KerberosHasher`
 provide a mean to associate a Django user model to a Kerberos identity.
 
 The content of the password field must be `kerberos$<principal name>`.
@@ -155,7 +156,7 @@ If login is succesfull the current view is reloaded.
 
 To use this template just add the following code to any of your templates::
 
-   {% include "django_kerberos/autologin.html" %}
+   {% include "django_kerberos_client/autologin.html" %}
 
 After a succesfull login a cookie is created which prevent autologin for the
 next 15 minutes, to permit login using other methods after an immediate logout.
